@@ -4,21 +4,26 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Resume Karnaukh Daria</title>
     <link rel="stylesheet" href="./scss/styles.scss" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
-    <load ="partials/header.html" />
-
-    <section>
-      <h1>Example page title</h1>
-      <!-- Path to images as from index.html file -->
-      <img src="./img/javascript.svg" alt="" />
-    </section>
-
-    <!-- Loads the specified .html file -->
-    <load ="partials/vite-promo.html" />
+    <load ="partials/home.html" />
+    <load ="partials/about.html" />
+    <load ="partials/skills.html" />
+    <load ="partials/portfolio.html" />
+    <load ="partials/contact.html" />
+    <load ="partials/footer.html" />
 
     <script type="module" src="./main.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150" width="400" height="150">
+  <!-- Коло як основа логотипа -->
+  <circle cx="200" cy="75" r="70" fill="#f0f0f0" stroke="#000" stroke-width="2"/>
+  
+  <!-- Ініціали "DK" -->
+  <text x="50%" y="50%" font-family="Arial, sans-serif" font-size="48" fill="#000" text-anchor="middle" dominant-baseline="middle">
+    DK
+  </text>
+</svg>
