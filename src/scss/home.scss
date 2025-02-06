@@ -1,6 +1,6 @@
 .main-page {
   background: rgba(11, 10, 10, 0.5);
-  padding: 60px 0px 70px 0;
+  padding: 30px 0px 0px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.6),
       rgba(46, 47, 66, 0.6)
@@ -11,53 +11,70 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  @include media(desktop) {
+    padding: 60px 0px 70px 0;
+  }
 }
 
 .wrapper-main-text {
   display: flex;
   flex-direction: column;
-  gap: 80px;
-  width: 800px;
+  justify-content: space-between;
+  height: 460px;
+  width: 280px;
   z-index: 4;
+  @include media(desktop) {
+    width: 800px;
+    justify-content: center;
+    height: auto;
+    gap: 80px;
+  }
 }
 
 .container-home-page {
-  display: flex;
+  height: 580px;
+  position: relative;
+  z-index: 1;
+  @include media(desktop) {
+    display: flex;
+    height: auto;
+  }
 }
 .main-page-title {
-  width: 600px;
+  width: 280px;
   color: #fff;
   font-family: Montserrat;
-  font-size: 50px;
+  font-size: 27px;
   font-weight: 500;
   line-height: normal;
+  text-align: right;
+
+  @include media(desktop) {
+    width: 600px;
+    font-size: 50px;
+    text-align: start;
+  }
 }
 
 .main-title {
-  text-align: right;
+  text-align: center;
   color: #fff;
   font-family: Montserrat;
-  font-size: 80px;
-  font-weight: 700;
+  font-size: 38px;
+  font-weight: 500;
   line-height: normal;
   text-transform: uppercase;
   -webkit-text-stroke-width: 5px;
   -webkit-text-stroke-color: #fff;
   text-shadow: 5px 5px 6px rgba(234, 186, 222, 0.7);
-}
-
-.main-title {
-  text-align: right;
-  color: #fff;
-  font-family: Montserrat;
-  font-size: 80px;
-  font-weight: 500;
-  line-height: normal;
-  text-transform: uppercase;
-  -webkit-text-stroke-width: 5px;
-  -webkit-text-stroke-color: #fff;
-  text-shadow: 0px 0px 0px rgba(234, 186, 222, 0.7);
   animation: textShadowAppear 9s ease-in forwards;
+
+  @include media(desktop) {
+    text-align: right;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: normal;
+  }
 }
 
 @keyframes textShadowAppear {
@@ -74,29 +91,49 @@
 
 .image-main-page {
   position: relative;
-  width: 500px;
-  top: -75px;
-  right: 40px;
-  height: 500px;
+  width: 300px;
+  top: 0%;
+  right: 0%;
+  z-index: -1;
+  transform: translate(0%, -130%);
+  right: 0px;
+  height: 300px;
   object-fit: cover;
+
+  @include media(desktop) {
+    position: relative;
+    z-index: 1;
+    width: 500px;
+    top: -75px;
+    right: 40px;
+    height: 500px;
+    object-fit: cover;
+    transform: translate(0%, 0%);
+  }
 }
 
 .image-main-page img {
-  position: relative;
-  z-index: 2;
   width: 100%;
   height: 100%;
   border: 20px solid #db3d9b2c;
   border-radius: 50%;
   object-fit: cover;
+  @include media(desktop) {
+    position: relative;
+    z-index: 6;
+  }
 }
 
 .spinning-number {
-  position: relative;
-  z-index: 1;
-  right: -16%;
-  font-size: 1.7em;
-  transform: translateY(200px);
+  display: none;
+  @include media(desktop) {
+    display: block;
+    position: relative;
+    z-index: 0;
+    right: -16%;
+    font-size: 1.7em;
+    transform: translateY(200px);
+  }
 }
 
 .spinning-number .wheel {

@@ -1,19 +1,19 @@
-<section class="contact container">
-  <h2>Have a Project in Mind? Let’s Talk!</h2>
+<section id="contact" class="contact container">
+  <h2 data-aos="fade-down" data-aos-duration="3000">Have a Project in Mind? Let’s Talk!</h2>
 
   <div class="wrapper-text-content">
     <div class="foto-contact"></div>
-    <p>
+    <p data-aos="zoom-out-left" data-aos-duration="3000">
       Looking for a developer to bring your ideas to life? Let’s collaborate to
       build fast, modern, and user-friendly web solutions! Whether it’s a
       personal project, a startup, or a business website – I’m here to help.
     </p>
   </div>
-  <div class="test">
+  <div data-aos="zoom-out-left" data-aos-duration="3000" class="test">
     <div class="main-content-contacts">
-      <h3>Feel free to reach out in a way that’s most convenient for you.</h3>
-      <div class="parent">
-        <div class="child child-1">
+      <h3 >Feel free to reach out in a way that’s most convenient for you.</h3>
+      <ul class="parent">
+        <li class="child child-1">
           <button class="button btn-1">
             <svg
               viewBox="0 0 100 100"
@@ -27,8 +27,8 @@
               ></path>
             </svg>
           </button>
-        </div>
-        <div class="child child-2">
+        </li>
+        <li class="child child-2">
           <button class="button btn-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -41,8 +41,8 @@
               ></path>
             </svg>
           </button>
-        </div>
-        <div class="child child-3">
+        </li>
+        <li class="child child-3">
           <button class="button btn-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,8 +54,8 @@
               ></path>
             </svg>
           </button>
-        </div>
-        <div class="child child-4">
+        </li>
+        <li class="child child-4">
           <button class="button btn-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -68,19 +68,17 @@
               ></path>
             </svg>
           </button>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
-    <div class="wrapper-form">
-      
-     <!-- From Uiverse.io by DavidTM96 --> 
+    <div data-aos="zoom-out-left" data-aos-duration="3000" class="wrapper-form">
 <div class="form-card1">
   <div class="form-card2">
-    <form class="form">
-      <p class="form-heading">Get In Touch</p>
+    <form class="form" id="contact-form">
+      <p class="form-heading">Get In Touch Me</p>
 
       <div class="form-field">
-        <input required="" placeholder="Name" class="input-field" type="text" />
+        <input required="" placeholder="Name" class="input-field" type="text" id="name"/>
       </div>
 
       <div class="form-field">
@@ -89,6 +87,7 @@
           placeholder="Email"
           class="input-field"
           type="email"
+          id="email"
         />
       </div>
 
@@ -99,6 +98,7 @@
           cols="30"
           rows="3"
           class="input-field"
+          id="message"
         ></textarea>
       </div>
 
@@ -111,3 +111,22 @@
     </div>
   </div>
 </section>
+
+
+<div id="success-modal" class="modal ">
+  <div class="modal-backdrop">
+      <div class="modal-container">
+          <button id="modal-close-btn"  class="button-close" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+              <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            
+          </button>
+          <h3 class="title-modal">
+              Thank you for your interest in cooperation!
+          </h3>
+          <p class="text-modal"> I appreciate your interest and will get in touch with you as soon as possible to discuss all the details of our collaboration. Please stay in touch!</p>
+      </div>
+  </div>
+</div>

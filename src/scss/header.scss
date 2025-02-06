@@ -1,25 +1,20 @@
 .header {
-  height: 70px;
   display: flex;
-  gap: 250px;
   align-items: center;
-  margin-bottom: 100px;
-  padding-left: 40px;
+  gap: 170px;
+  margin-bottom: 80px;
+  height: 70px;
   position: relative;
   z-index: 3;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 90px;
-
-  li {
-    color: #fff;
-    font-family: Inter;
-    font-size: 25px;
-    letter-spacing: normal;
+  @include media(desktop) {
+    height: 70px;
+    display: flex;
+    gap: 250px;
+    align-items: center;
+    margin-bottom: 100px;
+    padding-left: 40px;
+    position: relative;
+    z-index: 3;
   }
 }
 
@@ -30,4 +25,118 @@
   line-height: 125%;
   letter-spacing: -0.02em;
   gap: 6px;
+}
+
+.logo-text {
+  display: none;
+  @include media(desktop) {
+    display: block;
+  }
+}
+
+.nav-list {
+  display: none;
+  @include media(desktop) {
+    display: block;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 10px 20px;
+  }
+}
+
+.nav-link a {
+  position: relative;
+  font-size: 25px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.nav-link a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #ee0bd7;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link a:hover,
+.nav-link a:focus {
+  color: #ee0bd7;
+  transform: translateY(-3px);
+}
+
+.nav-link a:hover::before,
+.nav-link a:focus::before {
+  width: 100%;
+  left: 0;
+}
+
+.burger-menu-btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.burger-line {
+  position: relative;
+  width: 30px;
+  height: 4px;
+  background: white;
+  display: block;
+  transition: width 0.2s ease, margin 0.2s ease;
+}
+
+.burger-line::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 30px;
+  height: 4px;
+  background: white;
+  transition: margin 0.2s ease, width 0.2s ease, left 0.2s ease;
+}
+
+.burger-line::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 30px;
+  height: 4px;
+  background: white;
+  transition: margin 0.2s ease, left 0.2s ease;
+}
+
+.burger-menu-btn:hover .burger-line {
+  width: 20px;
+}
+
+.burger-menu-btn:hover .burger-line::before {
+  width: 10px;
+  top: -6px;
+  left: 5px;
+}
+
+.burger-menu-btn:hover .burger-line::after {
+  top: 6px;
+  left: -5px;
 }
