@@ -1,7 +1,7 @@
 .about {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 80px;
   padding: 100px 0px 100px 0;
   background: linear-gradient(rgba(46, 47, 66, 0.6), rgba(46, 47, 66, 0.6)),
     linear-gradient(135deg, #2a1e6f, #5c1f89, #912c99, #e44878);
@@ -19,19 +19,31 @@
       background-position: 0% 50%;
     }
   }
+  @include media(desktop) {
+    gap: 100px;
+  }
 }
 
 .container-about {
   display: flex;
-  gap: 80px;
+  flex-direction: column;
+  gap: 40px;
+  @include media(desktop) {
+    flex-direction: row;
+    gap: 80px;
+  }
 }
 
 .title-about {
   text-align: center;
   font-family: Montserrat;
-  font-size: 70px;
-  font-weight: 800;
+  font-size: 40px;
+  font-weight: 600;
   line-height: normal;
+  @include media(desktop) {
+    font-size: 70px;
+    font-weight: 800;
+  }
 }
 
 .image-about {
@@ -52,25 +64,34 @@
 
 .image-about img:hover,
 .image-about img:focus {
-  transform: scale(1.1);
+  transform: scale(0.9);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .container-text {
   display: flex;
-  width: 700px;
+  width: 280px;
   flex-direction: column;
   justify-content: center;
-  gap: 60px;
+  gap: 40px;
+
   p {
-    width: 700px;
-    font-size: 30px;
+    text-align: justify;
+    font-size: 18px;
     line-height: normal;
     transition: transform 0.3s ease-in-out, letter-spacing 0.3s ease-in-out;
+    @include media(desktop) {
+      font-size: 30px;
+      width: 700px;
+    }
+  }
+  @include media(desktop) {
+    width: 700px;
+    gap: 60px;
   }
 }
 
 .container-text p:hover,
 .container-text p:focus {
-  transform: scale(1.05);
+  transform: scale(0.9);
 }

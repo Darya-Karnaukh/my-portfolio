@@ -15,89 +15,127 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 1440px;
-  padding: 100px 50px 100px 30px;
+  padding: 100px 0px;
   background: rgba(11, 10, 10, 0.5);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.6),
       rgba(46, 47, 66, 0.6)
     ),
-    url(../img/4.jpg);
+    url(/img/4.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   h2 {
-    width: 900px;
     font-family: Montserrat;
-    font-size: 70px;
-    font-weight: 800;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
     line-height: normal;
-    text-align: end;
+
+    @include media(desktop) {
+      font-size: 70px;
+      font-weight: 800;
+      width: 900px;
+      text-align: end;
+    }
   }
 }
 
 .wrapper-text-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
-  gap: 80px;
+  gap: 20px;
 
   p {
-    width: 580px;
-    font-size: 35px;
-    text-align: start;
+    width: 280px;
+    font-size: 20px;
+    text-align: center;
     line-height: normal;
+    @include media(desktop) {
+      text-align: start;
+      width: 580px;
+      font-size: 35px;
+    }
+  }
+  @include media(desktop) {
+    flex-direction: row;
+    gap: 80px;
   }
 }
 
 .foto-contact {
-  width: 700px;
-  height: 560px;
+  width: 280px;
+  height: 300px;
   border-radius: 40%;
-  background-image: url(../img/IMG_6434-Photoroom.png);
+  background-image: url(/img/foto-contact.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @include media(desktop) {
+    width: 700px;
+    height: 560px;
+  }
 }
 .test {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
+  @include media(desktop) {
+    flex-direction: row;
+    gap: 20px;
+  }
 }
 .main-content-contacts {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 600px;
+  width: 280px;
 
   h3 {
-    width: 500px;
-    font-size: 40px;
+    width: 280px;
+    font-size: 27px;
     line-height: normal;
     margin-bottom: 40px;
+    @include media(desktop) {
+      width: 500px;
+      font-size: 40px;
+    }
+  }
+  @include media(desktop) {
+    width: 600px;
   }
 }
 
 .parent {
-  width: 600px;
+  width: 280px;
   height: 100%;
   display: flex;
-  align-items: start;
+  gap: 10px;
+  align-items: center;
+  @include media(desktop) {
+    width: 600px;
+    align-items: start;
+  }
 }
 
 .child {
   width: 100px;
-  height: 100px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
   transition: all 0.3s cubic-bezier(0.68, 0.85, 0.265, 1.85);
   border-radius: 5px;
-  margin: 0 10px;
   box-shadow: inset 4px 4px 20px hsla(284, 100%, 84%, 1), 2px 2px 7px #4442;
+  @include media(desktop) {
+    height: 100px;
+  }
 }
 
 .child:hover {
@@ -139,13 +177,16 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 600px;
+  width: 280px;
 
   h3 {
     text-align: start;
     font-size: 40px;
     line-height: normal;
     margin-bottom: 40px;
+  }
+  @include media(desktop) {
+    width: 600px;
   }
 }
 
@@ -154,23 +195,23 @@
   flex-direction: column;
   align-self: center;
   font-family: inherit;
-  gap: 15px;
-  padding-inline: 2em;
-  padding-bottom: 0.4em;
+  gap: 20px;
+  padding: 50px 25px;
   background: linear-gradient(rgba(46, 47, 66, 0.6), rgba(46, 47, 66, 0.6)),
     linear-gradient(135deg, #2a1e6f, #5c1f89, #912c99, #e44878);
   background-size: 200% 200%;
-
   border-radius: 20px;
 }
 
 .form-heading {
   text-align: center;
-  margin: 2em;
   color: #e604f6;
-  font-size: 1.7em;
+  font-size: 20px;
   background-color: transparent;
   align-self: center;
+  @include media(desktop) {
+    font-size: 27px;
+  }
 }
 
 .form-field {
@@ -200,7 +241,6 @@
 
 .sendMessage-btn {
   cursor: pointer;
-  margin-bottom: 3em;
   padding: 1em;
   border-radius: 10px;
   border: none;
@@ -238,6 +278,12 @@
 .form-card2:hover {
   transform: scale(0.98);
   border-radius: 20px;
+}
+
+#message {
+  resize: none;
+  overflow-y: auto;
+  max-height: 200px;
 }
 
 .modal {
